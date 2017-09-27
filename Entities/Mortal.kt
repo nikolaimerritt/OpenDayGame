@@ -13,7 +13,7 @@ abstract class Mortal(protected val name: String, private val maxHealth: Float) 
         }
     }
 
-    fun damageFor(healthLost: Float)
+    fun takeDamage(healthLost: Float)
     {
         if (healthLost > 0) throw IllegalArgumentException("Health lost is $healthLost, which is greater than 0. Did you mean to call heal?")
         health -= healthLost
